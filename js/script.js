@@ -13,42 +13,47 @@ For assistance:
 */
 
 
-const itemsPerPage = 2;
+
+
 
 /*
 Create the `showPage` function
 This function will create and insert/append the elements needed to display a "page" of nine students
 */
-const showPage = (list, page) => {
-   const startIndex = (page * itemsPerPage) - itemsPerPage;
-   const endIndex = page * itemsPerPage;
-//Selects the UL element with a class of student list and assins value it studentList
-   const studentList = document.querySelector('.student-list');
-   studentList.innerHTML = '';
-
-//Loop over list parameter
-   for(let i = 0; i < list.length; i++) {
-      if (i >= startIndex && i < endIndex) {
-   
-        studentList.insertAdjacentHTML =`<li class="student-item cf">
-          <div class="student-details">
-            <img class="avatar" src="https://randomuser.me/api/portraits/women/25.jpg" alt="Profile Picture">
-            <h3>Ethel Dean</h3>
-            <span class="email">ethel.dean@example.com</span>
-          </div>
-          <div class="joined-details">
-            <span class="date">Joined 12-15-2005</span>
-          </div>
-        </li>`
-
-      };
-   }
+const displayPage = (list, page) => {
+  const startIndex = (page * i) - i;
+  const endIndex = page * i;
 
 };
 
-const liste = ['yes','no','happy','sad'];
 
-showPage(liste, itemsPerPage);
+
+//Selects the UL element with a class of student list and assins value it studentList
+   
+const ul = document.querySelector('.student-list');
+
+
+for (let i = 0; i < data.length; i++) {
+//for (let key in data){
+  let li = document.createElement('li')
+  
+  li.innerHTML = `<li class="student-item cf">
+  <div class="student-details">
+    <img class="avatar" src="${data[i].picture.large}" alt="Profile Picture">
+    <h3>${data[i].name.title} ${data[i].name.first} ${data[i].name.last}</h3>
+    <span class="email">${data[i].email}</span>
+  </div>
+  <div class="joined-details">
+    <span class="date">${data[i].registered.date}</span>
+  </div>`
+  console.log(li)
+  ul.appendChild(li)
+}
+//ul.innerHTML = '';
+
+//Loop over list parameter
+
+
 
 /*
 Create the `addPagination` function
