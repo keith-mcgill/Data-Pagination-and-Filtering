@@ -13,17 +13,21 @@ For assistance:
 */
 
 
-
+//Reference to the class header
 const header = document.querySelector('.header');
+//creating searchBar element
 const searchBar = document.createElement('label');
-
+//setting searchBar HTML
 searchBar.innerHTML = `<label for="search" class="student-search">
 <span>Search by name</span>
 <input id="search" placeholder="Search by name...">
 <button type="button"><img src="img/icn-search.svg" alt="Search icon"></button>
 </label>
 `;
+//appending searchBar to header
 header.appendChild(searchBar);
+
+
 
 
 
