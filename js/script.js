@@ -19,6 +19,7 @@ const header = document.querySelector('.header');
 const searchBar = document.createElement('label');
 //setting searchBar HTML
 searchBar.innerHTML = `<label for="search" class="student-search">
+
 <span>Search by name</span>
 <input id="search" placeholder="Search by name...">
 <button type="button"><img src="img/icn-search.svg" alt="Search icon"></button>
@@ -26,11 +27,6 @@ searchBar.innerHTML = `<label for="search" class="student-search">
 `;
 //appending searchBar to header
 header.appendChild(searchBar);
-
-
-
-
-
 
 
 /*
@@ -87,8 +83,9 @@ const addPagination = (list) => {
     linkListUl.insertAdjacentElement('beforeend', button);
   };
 
-  //Select the first pagination button and give it a class name of active.
-  const firstButton = linkListUl.querySelector('li');
+  //Select the first pagination button and assigns it class active.
+  const firstButton = linkListUl.querySelector('button');
+  console.log(firstButton)
   firstButton.className = 'active';
   
   //Create an event listener to listen for clicks on the link-list variable
@@ -96,6 +93,7 @@ const addPagination = (list) => {
     if(e.target.tagName === 'BUTTON') {
       //Selects the button with the active class    
       const activeButton = linkListUl.querySelector('.active');
+      console.log(activeButton)
       //Removes the active class from the activeButton target
       activeButton.className = '';
       //Adds the active class to the event object
