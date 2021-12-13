@@ -31,6 +31,8 @@ header.appendChild(searchBar);
 
 
 
+
+
 /*
 Create the `showPage` function
 This function will create and insert/append the elements needed to display a "page" of nine students
@@ -38,7 +40,7 @@ This function will create and insert/append the elements needed to display a "pa
 const showPage = (list, page) => {
 //Variables to store the start index and the end index of the list items to be displayed on page.  
   const startIndex = (page * 9) - 9;
-  console.log(startIndex)
+  
   const endIndex = page * 9;
 //Selects the UL element with a class of student list and assign its value to a variable.
 const ul = document.querySelector('.student-list');
