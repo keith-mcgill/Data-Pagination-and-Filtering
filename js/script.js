@@ -85,7 +85,7 @@ const addPagination = (list) => {
 
   //Select the first pagination button and assigns it class active.
   const firstButton = linkListUl.querySelector('button');
-  console.log(firstButton)
+  
   firstButton.className = 'active';
   
   //Create an event listener to listen for clicks on the link-list variable
